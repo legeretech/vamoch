@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vamoch Creative Agency</title>
+    <link rel="icon" href="./images/vamoch_main_logo (1).svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- header section -->
+    <div class="header-container">
+        <div class="header-background"></div>
+        <div class="header-content">
+            <div class="header-top">
+                <img src="./images/vamoch_main_logo (1).svg" alt="Vamoch logo" class="header-logo">
+                <nav class="header-nav">
+                    <ul>
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>Services</li>
+                        <li>Works</li>
+                        <li>Blogs</li>
+                        <li>Career</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <button class="enquire-button">
+                        Enquire Now <img src="./images/Message-emoji (表情信息).png" alt="Icon" class="button-icon"> 
+                    </button>
+                </div>
+            </div>
+            <div class="header-main">
+                <h1 class="header-title">VAMOCH CREATIVE AGENCY</h1>
+                <p class="header-description">Unleash the power of creativity. Your one-stop creative agency for
+                    branding, design, and digital solutions.</p>
+                <div class="header-cta-action">
+                    <img src="./images/Objects.png" alt="Paw Icon" class="project-paw-icon">
+                    <div class="project-cta-text">
+                        <span style="color: white;">Let's Roar Together.</span> <br>
+                        <strong style="color: white;">Have a project in mind? <a
+                                style="font-weight: 100; color: white; text-decoration: none;" href="#">Connect with
+                                us.</a></strong>
+                    </div>
+                </div>
+            </div>
+            <div class="header-controls">
+                <button class="header-arrow" id="prevBtn">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <div class="header-progress-container">
+                    <span class="header-slide-indicator">01</span>
+                    <div class="header-progress-bar">
+                        <div class="header-progress"></div>
+                    </div>
+                </div>
+                <button class="header-arrow" id="nextBtn">
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- header section -->
+
+    <!-- header section script -->
+    <script>
+        const slides = [
+            {
+                background: './images/varunmohan_create_me_a_red_lion_face_attention_seeking_dark_red_d0ce374b-30b1-4cbf-8331-e8d894e2b259 1.jpg',
+                title: 'VAMOCH CREATIVE AGENCY',
+                description: 'Unleash the power of creativity. Your one-stop creative agency for branding, design, and digital solutions.',
+                cta: "Let's Roar Together.<br>Have a project in mind? Connect with us."
+            },
+            {
+                background: './images/varunmohan_create_me_a_red_lion_face_attention_seeking_dark_red_d0ce374b-30b1-4cbf-8331-e8d894e2b259 2.jpg',
+                title: 'Stellar Design, Cosmic Impact',
+                description: 'Innovative. Impactful. Unforgettable.  Elevate your brand with stunning visuals and captivating experiences.',
+                cta: "Transform Your Vision.<br>Ready to stand out? Let's create together."
+            },
+            {
+                background: './images/varunmohan_create_me_a_red_lion_face_attention_seeking_dark_red_d0ce374b-30b1-4cbf-8331-e8d894e2b259 3.jpg',
+                title: 'Think Beyond the Ordinary!',
+                description: 'Break the mold. Stand out from the crowd. We’ll help you craft a unique brand identity that leaves a lasting impression.',
+                cta: "Elevate Your Digital Game.<br>Ready to dominate online? Let's strategize."
+            }
+        ];
+
+        let currentIndex = 0;
+
+        const backgroundEl = document.querySelector('.header-background');
+        const titleEl = document.querySelector('.header-title');
+        const descriptionEl = document.querySelector('.header-description');
+        const ctaEl = document.querySelector('.header-cta-action .project-cta-text');
+        const progressEl = document.querySelector('.header-progress');
+        const slideIndicatorEl = document.querySelector('.header-slide-indicator');
+
+        function updateSlide(index) {
+            const slide = slides[index];
+            backgroundEl.style.backgroundImage = `url('${slide.background}')`;
+            titleEl.textContent = slide.title;
+            descriptionEl.textContent = slide.description;
+            ctaEl.innerHTML = slide.cta;
+            progressEl.style.width = `${((index + 1) / slides.length) * 100}%`;
+            slideIndicatorEl.textContent = `0${index + 1}`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlide(currentIndex);
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger-menu');
+        const nav = document.querySelector('.header-nav ul');
+        const enquireBtn = document.querySelector('.enquire-button');
+        
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('show');
+            enquireBtn.classList.toggle('show');
+        });
+
+        // Initialize first slide
+        updateSlide(currentIndex);
+    </script>
+    <!-- header section -->
+
+</body>
+</html>

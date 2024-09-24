@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Investment Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        
+        }
+
+        /* Investment Section */
+        .investment-section {
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+      
+        }
+
+        /* Container for both columns */
+        .investment-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 40px;
+        }
+
+        /* Left Column (Image) */
+        .investment-image-container {
+            position: relative;
+            flex: 1;
+        }
+
+        .investment-image {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Overlay for the image */
+        .image-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+
+        .image-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        .image-overlay p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+        }
+
+        .investment-returns {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .investment-returns strong {
+            font-size: 1.4rem;
+        }
+
+        .airport-info {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        /* Right Column (Content) */
+        .investment-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            width: 100px;
+            margin-bottom: 15px;
+        }
+
+        .investment-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+            line-height: 2.0;
+            letter-spacing: 3.0px;
+        }
+
+        .investment-content p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 2.7;
+            letter-spacing: 3.0px;
+        }
+
+        .article-info {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: auto;
+        }
+
+        .article-date, .read-time, .share-icon {
+            margin-right: 15px;
+        }
+
+        .share-icon {
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .investment-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="investment-section">
+        <div class="investment-container">
+
+            <!-- Left Column - Image with overlay -->
+            <div class="investment-image-container">
+                <img src="./images/k11kaira.png" alt="Luxury Homes" class="investment-image">
+              
+            </div>
+
+            <!-- Right Column - Text Content -->
+            <div class="investment-content">
+                <span class="tag">Designing</span>
+                <h2>Investment in Luxury holiday homes in Sakaleshpur minimum investment - 1 Cr</h2>
+                <p>Apple's entry into the generative AI space with Apple Intelligence marks a significant milestone in its history. Announced at WWDC 2024, Apple Intelligence aims to redefine user-device interactions with advanced AI capabilities.</p>
+                
+                <div class="article-info">
+                    <span class="article-date">June 14, 2024</span>
+                    <span class="read-time">10 mins Read</span>
+                    <img src="./images/Glasses-three (眼镜3).png" alt="Share" class="share-icon" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

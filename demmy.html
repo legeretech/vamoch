@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back to Top Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: red;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.back-to-top img {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.back-to-top:hover {
+    background-color: darkred;
+}
+
+    </style>
+    <div class="content">
+        <!-- Example Content Sections -->
+        <section style="height: 800px; background-color: lightgrey;">
+            <h2>Section 1</h2>
+            <p>Scroll down to see the button</p>
+        </section>
+
+        <section style="height: 800px; background-color: lightblue;">
+            <h2>Section 2</h2>
+        </section>
+
+        <section style="height: 800px; background-color: lightcoral;">
+            <h2>Section 3</h2>
+        </section>
+
+        <section style="height: 800px; background-color: lightgreen;">
+            <h2>Section 4</h2>
+        </section>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <a href="#top">
+            <img src="up-arrow.png" alt="Up Arrow">
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111; /* Black background */
+    color: #fff;
+}
+
+.services-section {
+    padding: 80px 20px;
+    text-align: left;
+}
+
+.services-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.services-subtitle {
+    color: #e74c3c; /* Red */
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.services-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.services-description {
+    font-size: 1.2rem;
+    color: #aaa; /* Light grey */
+    margin-bottom: 40px;
+    font-weight: 300;
+    max-width: 700px;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    width: 45%;
+    border-bottom: 1px solid #333;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .arrow-icon {
+    transform: translateX(10px);
+}
+
+.service-item:hover .service-name {
+    color: #e74c3c; /* Red on hover */
+}
+
+.service-name {
+    font-size: 1.2rem;
+    color: #ddd; /* Light grey */
+}
+
+.arrow-icon {
+    font-size: 1.5rem;
+    color: #e74c3c; /* Red */
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-item {
+        width: 100%;
+    }
+
+    .services-title {
+        font-size: 2rem;
+    }
+
+    .services-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-title {
+        font-size: 1.8rem;
+    }
+
+    .services-description {
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
+    <section class="services-section">
+        <div class="services-container">
+            <h3 class="services-subtitle">Our Services</h3>
+            <h1 class="services-title">Crafting Creative Solutions for Your Business</h1>
+            <p class="services-description">
+                We offer a wide range of creative services designed to elevate your brand and drive results.
+            </p>
+            <div class="services-list">
+                <div class="service-item">
+                    <span class="service-name">Brand Strategy & Development</span>
+                    <span class="arrow-icon">→</span>
+                </div>
+                <div class="service-item">
+                    <span class="service-name">Graphic Design & Visual Identity</span>
+                    <span class="arrow-icon">→</span>
+                </div>
+                <div class="service-item">
+                    <span class="service-name">Web Design & Development</span>
+                    <span class="arrow-icon">→</span>
+                </div>
+                <div class="service-item">
+                    <span class="service-name">Digital Marketing & Social Media</span>
+                    <span class="arrow-icon">→</span>
+                </div>
+                <div class="service-item">
+                    <span class="service-name">Content Creation & Copywriting</span>
+                    <span class="arrow-icon">→</span>
+                </div>
+                <div class="service-item">
+                    <span class="service-name">Video Production & Animation</span>
+                    <span class="arrow-icon">→</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
